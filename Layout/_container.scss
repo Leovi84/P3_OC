@@ -1,0 +1,20 @@
+.filterList ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+li.linkList {
+    list-style-type: none;
+    background: #fafafa;
+    margin: 15px;
+    @include box-shadow($shadows);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.linkList a h3 i {
+    display: flex;
+    flex-direction: row;
+}

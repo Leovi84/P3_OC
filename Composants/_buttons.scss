@@ -1,3 +1,15 @@
+a {
+    text-decoration: none;
+    color: $stack-light-color;
+}
+
+.linkList a {
+    text-decoration: none;
+    color: #696969; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
 .btnExplore{
     background: $gradient-btn;

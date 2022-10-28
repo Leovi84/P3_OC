@@ -1,13 +1,9 @@
-header {
-
-}
-
 .infoSite {
     display: flex;
-    filter: drop-shadow(5px 5px 5px #696969);
-    background-color: $stack-light-color;
+    background: $stack-light-color;
     align-items: center;
     justify-content: center;
+    @include box-shadow($shadows);
     @include mobile-only{
         flex-direction: column;
         padding: 15px;
@@ -20,19 +16,15 @@ header {
 }
 
 .searchField {
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     display: flex;
     padding: 15px;
     align-items: center;
     justify-content: center;
 }
 
-i.fa-solid.fa-location-dot {
-    padding: 15px;
-}
-
 .caption {
-    background-color: #fafafa;
+    background: #fafafa;
     display: flex;
     align-items: center;
     flex-direction: column;
