@@ -10,6 +10,7 @@ header {
     justify-content: center;
     @include mobile-only{
         flex-direction: column;
+        padding: 15px;
     }
 }
 
@@ -24,17 +25,21 @@ header {
     padding: 15px;
     align-items: center;
     justify-content: center;
-
 }
 
-i .fa-solid .fa-location-dot {
-    padding: 5px;
+i.fa-solid.fa-location-dot {
+    padding: 15px;
 }
 
 .caption {
     background-color: #fafafa;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    margin: 15px;
+}
 
+.caption h1, .caption p {
+    text-align: center;
+    padding: 10px;
+    margin: 0 15px;
 }

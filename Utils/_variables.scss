@@ -5,9 +5,11 @@ $stack-light-color: #ffffff;
 $primary-color:#9356DC;
 $secondary-color:#FF79DA;
 $third-color:#99E2D0;
+$gradient-btn: linear-gradient(360deg, rgba(147,86,220,0.5) 50%, rgba(255,121,218,1) 100%);
+
 
 $breakpoints: (
-  mobile: 768px
+  mobile: 768px,
   tablet: 992px
 );
 
