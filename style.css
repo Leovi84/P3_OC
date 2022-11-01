@@ -55,6 +55,12 @@ h2.titleMenu {
   font-size: 5rem;
 }
 
+.cardText h4 {
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 500;
+}
+
 .linkList h3 {
   border-radius: 100%;
   background: #9356DC;
@@ -98,7 +104,7 @@ a {
 }
 
 .btnExplore {
-  background: linear-gradient(360deg, rgba(147, 86, 220, 0.5) 50%, rgb(255, 121, 218) 100%);
+  background: linear-gradient(360deg, rgba(147, 86, 220, 0.8) 0%, rgb(255, 121, 218) 100%);
 }
 
 .infoSite {
@@ -160,10 +166,96 @@ li.linkList {
   border-radius: 15px;
   padding: 10px;
 }
+li.linkList:hover {
+  background: #bc95e9;
+}
 
 .linkList a h3 i {
   display: flex;
   flex-direction: row;
+}
+
+.linkList a i {
+  color: #696969;
+}
+.linkList a i:hover .fullMobile + .fullList + .fullStore {
+  color: #696969 #9356DC;
+}
+
+.restaurants {
+  max-width: 100%;
+  background: #fafafa;
+}
+
+.restaurants .sectionArticle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.restaurantsParis article {
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+  -moz-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+  box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .restaurantsParis article {
+    max-width: 100%;
+    margin: 15px;
+  }
+}
+
+.restaurantsParis article img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .restaurantsParis article img {
+    width: 455px;
+    height: 303px;
+  }
+}
+
+span {
+  background: #99E2D0;
+  padding: 12px;
+  color: #38c4a1;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+.newRestaurant {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.newRestaurant span {
+  position: relative;
+  top: -275px;
+  right: 15px;
+}
+.cardText {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icone .fa-duotone.fa-heart {
+  color: #696969;
+}
+
+.icone .fa-duotone.fullHeart {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
