@@ -14,18 +14,11 @@ h1 {
     @include mobile-only{
         font-weight: 500;
         font-size: 3rem !important;
-        justify-content: center;
-        align-items: center;
     }
-}
-
-h2 {
-    margin: 30px 15px;
 }
 
 h2.titleMenu {
     font-family: 'Shrikhand', sans-serif;
-    font-weight: 900;
     font-size: 5rem;
 }
 
@@ -36,20 +29,20 @@ h2.titleMenu {
 }
 
 .linkList h3 {
-    border-radius: 100%;
-    background: $primary-color;
-    padding: 7px 15px;
-    height: 45px;
-    width: 45px;
     color: $stack-light-color;
+    font-weight: 400 !important;
 }
 
 p {
+    padding: 0 10px 10px 10px;
     color: #696969;
 }
 
 p.searchPlaceholder, p.functionsList {
     color: $stack-dark-color;
+    @include tablet-only {
+        padding: 0;        
+    }
 }
 
 button {
@@ -57,9 +50,14 @@ button {
     font-weight: 500;
     font-size: 2.75rem;
     color: $stack-light-color;
-    background-color: $secondary-color;
-    padding: 15px;
-    border-radius: 25px;
-    border: transparent;
-    margin: 30px 0 !important;
+}
+
+p.lightLogo {
+    font-family: 'Shrikhand', sans-serif;
+    color: $stack-light-color;
+    font-size: 2.5rem; 
+}
+
+.aboutList ul li i {
+    color: $stack-light-color;
 }

@@ -1,0 +1,15 @@
+footer {
+    background: $stack-lighten-dark-color;
+    padding: 25px;
+}
+
+ul.aboutList {
+    display: flex; 
+    flex-direction: column;
+    & > li {
+        list-style-type: none;
+    }
+    & > a {
+        padding-left: 25px;
+    }
+}

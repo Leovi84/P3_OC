@@ -1,3 +1,11 @@
+/*@mixin padding($paddings) {
+
+}
+
+$paddings: {
+    padding-paragraph: 0 10px 10px 10px,
+    padding-small: 15px,
+}*/
 *,
 *::after,
 *::before {
@@ -16,7 +24,7 @@ body {
 }
 
 section {
-  margin: 15px;
+  margin: 0 15px;
 }
 
 i {
@@ -40,18 +48,11 @@ h1 {
   h1 {
     font-weight: 500;
     font-size: 3rem !important;
-    justify-content: center;
-    align-items: center;
   }
-}
-
-h2 {
-  margin: 30px 15px;
 }
 
 h2.titleMenu {
   font-family: "Shrikhand", sans-serif;
-  font-weight: 900;
   font-size: 5rem;
 }
 
@@ -62,20 +63,22 @@ h2.titleMenu {
 }
 
 .linkList h3 {
-  border-radius: 100%;
-  background: #9356DC;
-  padding: 7px 15px;
-  height: 45px;
-  width: 45px;
   color: #ffffff;
+  font-weight: 400 !important;
 }
 
 p {
+  padding: 0 10px 10px 10px;
   color: #696969;
 }
 
 p.searchPlaceholder, p.functionsList {
   color: #000000;
+}
+@media screen and (max-width: 992px) {
+  p.searchPlaceholder, p.functionsList {
+    padding: 0;
+  }
 }
 
 button {
@@ -83,11 +86,16 @@ button {
   font-weight: 500;
   font-size: 2.75rem;
   color: #ffffff;
-  background-color: #FF79DA;
-  padding: 15px;
-  border-radius: 25px;
-  border: transparent;
-  margin: 30px 0 !important;
+}
+
+p.lightLogo {
+  font-family: "Shrikhand", sans-serif;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.aboutList ul li i {
+  color: #ffffff;
 }
 
 a {
@@ -107,11 +115,27 @@ a {
   background: linear-gradient(360deg, rgba(147, 86, 220, 0.8) 0%, rgb(255, 121, 218) 100%);
 }
 
+button {
+  background-color: #FF79DA;
+  padding: 15px;
+  border-radius: 25px;
+  border: transparent;
+  margin: 30px 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .infoSite {
   display: flex;
   background: #ffffff;
   align-items: center;
   justify-content: center;
+  padding: 15px;
   -webkit-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   -moz-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
@@ -119,7 +143,6 @@ a {
 @media screen and (max-width: 768px) {
   .infoSite {
     flex-direction: column;
-    padding: 15px;
   }
 }
 
@@ -131,6 +154,7 @@ a {
 .searchField {
   background: #f5f5f5;
   display: flex;
+  margin-top: 15px;
   padding: 15px;
   align-items: center;
   justify-content: center;
@@ -149,11 +173,30 @@ a {
   margin: 0 15px;
 }
 
-.filterList ul {
+h2 {
+  margin: 30px 15px;
+}
+
+ul.filtersList {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  ul.filtersList {
+    flex-direction: column;
+  }
+}
+
+.linkList h3 {
+  border-radius: 100%;
+  background: #9356DC;
+  padding: 4px 10px;
+  height: 35px;
+  width: 35px;
+  position: relative;
+  right: 30px;
 }
 
 li.linkList {
@@ -167,19 +210,16 @@ li.linkList {
   padding: 10px;
 }
 li.linkList:hover {
-  background: #bc95e9;
+  background: #f2eafb;
 }
-
-.linkList a h3 i {
+li.linkList:hover i {
+  color: #9356DC;
+}
+li.linkList h3 p i {
   display: flex;
   flex-direction: row;
-}
-
-.linkList a i {
-  color: #696969;
-}
-.linkList a i:hover .fullMobile + .fullList + .fullStore {
-  color: #696969 #9356DC;
+  position: relative;
+  right: 30px;
 }
 
 .restaurants {
@@ -192,35 +232,44 @@ li.linkList:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  .restaurants .sectionArticle {
+    flex-direction: column;
+  }
 }
 
 .restaurantsParis article {
-  max-width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  margin: 20px;
   -webkit-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   -moz-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .restaurantsParis article {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .restaurantsParis article {
     margin: 15px;
   }
 }
 
 .restaurantsParis article img {
   border-radius: 20px 20px 0 0;
-  width: 100%;
+  width: 350px;
+  height: 200px;
   object-fit: cover;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .restaurantsParis article img {
-    width: 455px;
-    height: 303px;
+    display: flex;
   }
 }
 
@@ -228,34 +277,50 @@ span {
   background: #99E2D0;
   padding: 12px;
   color: #38c4a1;
-  font-weight: 900;
+  font-weight: 400;
   border-radius: 5px;
 }
 
 .newRestaurant {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .newRestaurant span {
-  position: relative;
-  top: -275px;
+  position: absolute;
+  top: 15px;
   right: 15px;
 }
+
 .cardText {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
-
-.icone .fa-duotone.fa-heart {
-  color: #696969;
+.cardText .icone i.fa-heart {
+  color: #37474f;
+  font-size: 3rem;
 }
-
-.icone .fa-duotone.fullHeart {
+.cardText .icone i.fullHeart {
   color: #9356DC;
+  font-size: 3rem;
+}
+
+footer {
+  background: #37474f;
+  padding: 25px;
+}
+
+ul.aboutList {
+  display: flex;
+  flex-direction: column;
+}
+ul.aboutList > li {
+  list-style-type: none;
+}
+ul.aboutList > a {
+  padding-left: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

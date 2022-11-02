@@ -14,3 +14,11 @@ a {
 .btnExplore{
     background: $gradient-btn;
 }
+
+button {
+    background-color: $secondary-color;
+    padding: 15px;
+    border-radius: 25px;
+    border: transparent;
+    margin: 30px 0 !important;
+}

@@ -1,8 +1,25 @@
-.filterList ul {
+h2 {
+    margin: 30px 15px;
+}
+
+ul.filtersList {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: row;
+    @include mobile-only {
+        flex-direction: column;
+        }
+}
+
+.linkList h3 {
+    border-radius: 100%;
+    background: $primary-color;
+    padding: 4px 10px;
+    height: 35px;
+    width: 35px;
+     position: relative;
+    right: 30px;
 }
 
 li.linkList {
@@ -12,23 +29,17 @@ li.linkList {
     @include box-shadow($shadows);
     border-radius: 15px;
     padding: 10px;
-        &:hover {
-            background: lighten($primary-color, 15%);
-        }
-}
-
-.linkList a h3 i {
-    display: flex;
-    flex-direction: row;
-}
-
-.linkList a i {
-    color: $stack-lighten-dark-color;
     &:hover {
-        .fullMobile + .fullList + .fullStore  {
-        color: $stack-lighten-dark-color($primary-color);
+        background: lighten($primary-color, 35%);
     }
-}
+    &:hover i {
+        color: $primary-color;
+    }
+    h3 p i {
+        @include flex-row;
+        position: relative;
+        right: 30px;
+    }
 }
 
 .restaurants {
@@ -41,29 +52,34 @@ li.linkList {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;   
+    @include mobile-only{
+        flex-direction: column;
+    }
 }
 
 .restaurantsParis article {
-    max-width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    margin: 20px;
     @include box-shadow($shadows);
-    @include mobile-only{
+    @include tablet-only{
         max-width: 100%;
+    }
+    @include mobile-only{
         margin: 15px;
     }
 }
 
 .restaurantsParis article img {
     border-radius: 20px 20px 0 0;
-    width: 100%;
+    width: 350px;
+    height: 200px;
     object-fit: cover;
-    @include mobile-only{
-        width: 455px;
-        height: 303px;
+    @include tablet-only{
+        display: flex;
     }
 }
 
@@ -71,23 +87,18 @@ span {
     background: $third-color;
     padding: 12px;
     color: darken($third-color, 25%);
-    font-weight: 900;
+    font-weight: 400;
     border-radius: 5px;
 }
 
 .newRestaurant {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    position: relative;
 }
 
 .newRestaurant span {
-    position: relative;
-    top: -275px;
+    position: absolute;
+    top: 15px;
     right: 15px;
-    @include mobile-only{        
-
-    }
 }
 
 .cardText {
@@ -95,11 +106,14 @@ span {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-.icone .fa-duotone.fa-heart {
-    color: $stack-lighten-dark-color;
-}
-
-.icone .fa-duotone.fullHeart{
-    color: $primary-color;
+    padding: 0 10px;
+    .icone i.fa-heart {
+        color: $stack-lighten-dark-color;
+        font-size: 3rem;
+    }
+    
+    .icone i.fullHeart {
+        color: $primary-color;
+        font-size: 3rem;
+    }
 }

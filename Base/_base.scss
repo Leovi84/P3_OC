@@ -7,7 +7,6 @@
 }
 
 html {
-    // 10px div by def of 16px
     font-size: 62.5%;
 }
 
@@ -16,8 +15,8 @@ body {
     background: $stack-light-color;
 }
 
-section { 
-    margin: 15px;
+section {
+    margin: 0 15px;
 }
 
 i {
