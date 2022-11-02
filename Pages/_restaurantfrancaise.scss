@@ -1,0 +1,22 @@
+.platImage {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    & img {
+        width: 400px;
+    }
+}
+
+.menu {
+    background: $stack-light-color;
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    top: -80px;
+    margin: 0;
+    & .sectionTitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

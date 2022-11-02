@@ -1,0 +1,50 @@
+.restaurants {
+    max-width: 100%;
+    background: #fafafa;
+}
+
+.restaurants .sectionArticle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;   
+    @include mobile-only{
+        flex-direction: column;
+    }
+}
+
+.restaurantsParis article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    @include box-shadow($shadows);
+    @include tablet-only{
+        max-width: 100%;
+    }
+    @include mobile-only{
+        margin: 15px;
+    }
+}
+
+.restaurantsParis article img {
+    border-radius: 20px 20px 0 0;
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    @include tablet-only{
+        display: flex;
+    }
+}
+
+.newRestaurant {
+    position: relative;
+}
+
+.newRestaurant span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}

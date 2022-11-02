@@ -5,41 +5,16 @@ h1 {
     }
 }
 
-.infoSite {
+.idLogo {
     display: flex;
     background: $stack-light-color;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 15px;
     @include box-shadow($shadows);
-    @include mobile-only{
-        flex-direction: column;
-    }
 }
 
-.infoSite img {
+.idLogo img {
     width: 100%;
     height: 35px;
-}
-
-.searchField {
-    background: #f5f5f5;
-    display: flex;
-    margin-top: 15px;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-}
-
-.caption {
-    background: #fafafa;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.caption h1, .caption p {
-    text-align: center;
-    padding: 10px;
-    margin: 0 15px;
 }

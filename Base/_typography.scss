@@ -7,6 +7,11 @@ body {
     line-height: 1.2;
 }
 
+.idLogo i {
+    color: $stack-lighten-dark-color;
+    font-size: 3rem;
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -19,7 +24,7 @@ h1 {
 
 h2.titleMenu {
     font-family: 'Shrikhand', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .cardText h4 {

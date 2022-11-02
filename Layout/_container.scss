@@ -1,10 +1,31 @@
+.searchField {
+    background: #f5f5f5;
+    display: flex;
+    margin-top: 15px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption {
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caption h1, .caption p {
+    text-align: center;
+    padding: 10px;
+    margin: 0 15px;
+}
+
 h2 {
     margin: 30px 15px;
 }
 
 ul.filtersList {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     @include mobile-only {
@@ -42,63 +63,12 @@ li.linkList {
     }
 }
 
-.restaurants {
-    max-width: 100%;
-    background: #fafafa;
-}
-
-.restaurants .sectionArticle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;   
-    @include mobile-only{
-        flex-direction: column;
-    }
-}
-
-.restaurantsParis article {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    margin: 20px;
-    @include box-shadow($shadows);
-    @include tablet-only{
-        max-width: 100%;
-    }
-    @include mobile-only{
-        margin: 15px;
-    }
-}
-
-.restaurantsParis article img {
-    border-radius: 20px 20px 0 0;
-    width: 350px;
-    height: 200px;
-    object-fit: cover;
-    @include tablet-only{
-        display: flex;
-    }
-}
-
 span {
     background: $third-color;
     padding: 12px;
     color: darken($third-color, 25%);
     font-weight: 400;
     border-radius: 5px;
-}
-
-.newRestaurant {
-    position: relative;
-}
-
-.newRestaurant span {
-    position: absolute;
-    top: 15px;
-    right: 15px;
 }
 
 .cardText {
@@ -110,8 +80,7 @@ span {
     .icone i.fa-heart {
         color: $stack-lighten-dark-color;
         font-size: 3rem;
-    }
-    
+    }   
     .icone i.fullHeart {
         color: $primary-color;
         font-size: 3rem;
