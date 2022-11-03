@@ -70,19 +70,3 @@ span {
     font-weight: 400;
     border-radius: 5px;
 }
-
-.cardText {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    .icone i.fa-heart {
-        color: $stack-lighten-dark-color;
-        font-size: 3rem;
-    }   
-    .icone i.fullHeart {
-        color: $primary-color;
-        font-size: 3rem;
-    }
-}

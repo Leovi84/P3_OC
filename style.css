@@ -61,6 +61,14 @@ h2.titleMenu {
   font-size: 3rem;
 }
 
+h3 {
+  color: #263238;
+}
+
+h4 {
+  color: #000000;
+}
+
 .cardText h4 {
   font-size: 2rem;
   color: #000000;
@@ -74,7 +82,7 @@ h2.titleMenu {
 
 p {
   padding: 0 10px 10px 10px;
-  color: #696969;
+  color: #263238;
 }
 
 p.searchPlaceholder, p.functionsList {
@@ -84,6 +92,11 @@ p.searchPlaceholder, p.functionsList {
   p.searchPlaceholder, p.functionsList {
     padding: 0;
   }
+}
+
+.sectionTitle i .fa-regular .fa-heart {
+  font-size: 3rem;
+  color: #263238;
 }
 
 button {
@@ -232,22 +245,6 @@ span {
   border-radius: 5px;
 }
 
-.cardText {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-}
-.cardText .icone i.fa-heart {
-  color: #263238;
-  font-size: 3rem;
-}
-.cardText .icone i.fullHeart {
-  color: #9356DC;
-  font-size: 3rem;
-}
-
 footer {
   background: #263238;
   padding: 25px;
@@ -325,6 +322,22 @@ ul.aboutList > a {
   right: 15px;
 }
 
+article .cardTextRestaurant {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+article .cardTextRestaurant .icone i.fa-heart {
+  color: #263238;
+  font-size: 3rem;
+}
+article .cardTextRestaurant .icone i.fullHeart {
+  color: #9356DC;
+  font-size: 3rem;
+}
+
 .platImage {
   display: flex;
   align-items: center;
@@ -332,6 +345,11 @@ ul.aboutList > a {
 }
 .platImage img {
   width: 400px;
+}
+@media screen and (max-width: 992px) {
+  .platImage img {
+    width: 800px;
+  }
 }
 
 .menu {
@@ -346,6 +364,66 @@ ul.aboutList > a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+.sectionSubTitle {
+  padding: 10px 15px;
+}
+.sectionSubTitle hr {
+  max-width: 50px;
+  color: #99E2D0;
+}
+
+article .cardTextMenu {
+  background: #fafafa;
+  margin: 15px;
+  -webkit-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+  -moz-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+  box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+  border-radius: 15px;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+article .cardTextMenu .cardDescription {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  padding: 5px;
+}
+article .cardTextMenu .cardDescription h4 {
+  font-size: 20px;
+  padding: 5px;
+}
+article .cardTextMenu .cardDescription p {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.checkValid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+span.check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 0 15px 15px 0;
+}
+span.check i {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  background: #ffffff;
+  padding: 6px 8px;
+}
+
+article button {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

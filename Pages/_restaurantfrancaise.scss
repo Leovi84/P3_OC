@@ -4,6 +4,9 @@
     justify-content: space-around;
     & img {
         width: 400px;
+        @include tablet-only {
+            width: 800px;
+            }
     }
 }
 
@@ -19,4 +22,66 @@
         justify-content: space-around;
         align-items: center;
     }
+}
+
+.sectionSubTitle {
+    padding: 10px 15px;
+    hr {
+        max-width: 50px;
+        color: $third-color;
+    }
+}
+
+article .cardTextMenu {
+    background: #fafafa;
+    margin: 15px;
+    @include box-shadow($shadows);
+    border-radius: 15px;
+    padding: 0;
+    flex-wrap: nowrap;
+        .cardDescription {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            position: absolute;
+            padding: 5px;
+            h4 {
+                font-size: 20px;
+                padding: 5px;
+            }
+            p {
+                font-size: 16px;
+                padding: 5px;
+            }
+        }
+}
+
+.checkValid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    p.price {
+
+    }
+}
+
+span.check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0 15px 15px 0;
+    & i {
+        border-radius: 100%;
+        height: 35px;
+        width: 35px;
+        background: $stack-light-color;
+        padding: 6px 8px;
+    }
+}
+
+article button {
+    display: flex;
+    justify-content: center;
 }

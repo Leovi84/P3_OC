@@ -27,6 +27,14 @@ h2.titleMenu {
     font-size: 3rem;
 }
 
+h3 {
+    color: $stack-lighten-dark-color;
+}
+
+h4 {
+    color: $stack-dark-color;
+}
+
 .cardText h4 {
     font-size: 2rem;
     color: $stack-dark-color;
@@ -40,7 +48,7 @@ h2.titleMenu {
 
 p {
     padding: 0 10px 10px 10px;
-    color: #696969;
+    color: $stack-lighten-dark-color;
 }
 
 p.searchPlaceholder, p.functionsList {
@@ -48,6 +56,11 @@ p.searchPlaceholder, p.functionsList {
     @include tablet-only {
         padding: 0;        
     }
+}
+
+.sectionTitle i .fa-regular .fa-heart {
+    font-size: 3rem;
+    color: $stack-lighten-dark-color;;
 }
 
 button {
