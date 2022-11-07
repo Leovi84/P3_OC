@@ -9,9 +9,12 @@ h1 {
     display: flex;
     background: $stack-light-color;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 15px;
     @include box-shadow($shadows);
+    @include mobile-only{
+        justify-content: space-around;   
+    }
 }
 
 .idLogo img {

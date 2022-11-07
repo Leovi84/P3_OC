@@ -155,11 +155,16 @@ button {
   display: flex;
   background: #ffffff;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 15px;
   -webkit-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   -moz-box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
+}
+@media screen and (max-width: 768px) {
+  .idLogo {
+    justify-content: space-around;
+  }
 }
 
 .idLogo img {
@@ -237,7 +242,7 @@ li.linkList h3 p i {
   right: 30px;
 }
 
-span {
+span.newTag {
   background: #99E2D0;
   padding: 12px;
   color: #38c4a1;
@@ -329,26 +334,50 @@ article .cardTextRestaurant {
   align-items: center;
   padding: 0 10px;
 }
-article .cardTextRestaurant .icone i.fa-heart {
+
+span.icone i.fa-regular.fa-heart {
   color: #263238;
   font-size: 3rem;
+  opacity: 1;
 }
-article .cardTextRestaurant .icone i.fullHeart {
-  color: #9356DC;
-  font-size: 3rem;
+span.icone i.fa-regular.fa-heart:active {
+  display: none;
+}
+span.icone i.fa-regular.fa-heart:hover {
+  transition: 0.3s;
+  opacity: 0;
 }
 
-.platImage {
+span.icone i.fa-solid.fa-heart {
+  font-size: 3rem;
+  opacity: 0;
+  color: linear-gradient(360deg, rgba(147, 86, 220, 0.8) 0%, rgb(255, 121, 218) 100%);
+}
+span.icone i.fa-solid.fa-heart:active {
+  display: block;
+}
+span.icone i.fa-solid.fa-heart:hover {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+section.platImage {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 0;
 }
-.platImage img {
-  width: 400px;
+section.platImage img {
+  width: 100%;
 }
 @media screen and (max-width: 992px) {
-  .platImage img {
-    width: 800px;
+  section.platImage img {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.platImage img {
+    height: 250px;
   }
 }
 
@@ -356,14 +385,25 @@ article .cardTextRestaurant .icone i.fullHeart {
   background: #ffffff;
   position: relative;
   border-radius: 40px 40px 0 0;
-  top: -80px;
   margin: 0;
+  top: -300px;
+  padding: 15px;
 }
 .menu .sectionTitle {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .menu {
+    top: -180px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    top: -80px;
+  }
 }
 
 .sectionSubTitle {
@@ -424,6 +464,7 @@ span.check i {
 article button {
   display: flex;
   justify-content: center;
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

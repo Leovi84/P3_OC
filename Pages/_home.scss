@@ -55,12 +55,31 @@ article .cardTextRestaurant {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    .icone i.fa-heart {
-        color: $stack-lighten-dark-color;
-        font-size: 3rem;
-    }   
-    .icone i.fullHeart {
-        color: $primary-color;
-        font-size: 3rem;
+}
+
+span.icone i.fa-regular.fa-heart {
+    color: $stack-lighten-dark-color;
+    font-size: 3rem;
+    opacity: 1;
+        &:active {
+            display: none;
+        }
+        &:hover {
+            transition: 0.3s;
+            opacity: 0;
+        }
+}
+
+span.icone i.fa-solid.fa-heart {
+    font-size: 3rem;
+    opacity: 0;
+    color: $primary-color;
+    &:active {
+        display: block;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        opacity: 1;
     }
 }
