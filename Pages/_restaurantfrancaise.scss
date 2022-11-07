@@ -50,6 +50,9 @@ article .cardTextMenu {
     border-radius: 15px;
     padding: 0;
     flex-wrap: nowrap;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: transform $trans-dur cubic-bezier(0, 1, 0, 1);
         .cardDescription {
             display: flex;
             flex-wrap: wrap;
@@ -65,6 +68,11 @@ article .cardTextMenu {
                 padding: 5px;
             }
         }
+        @include mobile-only {
+            display: block;
+            transform: translateX(0%);
+            transition: transform $trans-dur cubic-bezier(0, 1, 0, 1);
+        }   
 }
 
 .checkValid {
