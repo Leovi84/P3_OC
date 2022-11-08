@@ -63,7 +63,7 @@ li.linkList {
     }
 }
 
-span.newTag {
+span.newTag, span.check {
     background: $third-color;
     padding: 12px;
     color: darken($third-color, 25%);
