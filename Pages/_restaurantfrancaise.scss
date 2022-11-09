@@ -87,12 +87,6 @@ section.platImage {
             transition: right 1s;
             right: 90px; 
         }
-        &:active .cardDescription {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 350px;
-        }
     }
 }
 
@@ -111,11 +105,21 @@ article .cardTextMenu {
             flex-wrap: wrap;
             flex-direction: column;
             position: absolute;
-            h4 {
-                font-size: 20px;
-                padding: 5px;
-            } 
-    }
+        }
+        h4 {
+            font-size: 20px;
+            padding: 5px;
+            @include truncate($texttruncated: false);
+            @include tablet-only {
+                @include truncate($texttruncated: true);
+            }
+        }
+        p {
+            @include truncate($texttruncated: false);
+            @include tablet-only {
+                @include truncate($texttruncated: true);
+            }
+        }
 }
 
 .checkValid {
@@ -152,13 +156,8 @@ span.check {
         background: $stack-light-color;
         padding: 6px 8px;
     }
-    @include mobile-only {
-        &:active {
-
-        }
 }
 
-}
 article button {
     display: flex;
     justify-content: center;

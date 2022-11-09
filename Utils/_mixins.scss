@@ -28,11 +28,13 @@ $shadows: 0px 6px 8px 2px rgba(189,189,189,0.8);
     flex-direction: row;
 }
 
-/*@mixin padding($paddings) {
-
+@mixin truncate($texttruncated: true) {
+    @if($texttruncated){
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 992px;
+    }@else{
+        display: inline-flex;
+    }
 }
-
-$paddings: {
-    padding-paragraph: 0 10px 10px 10px,
-    padding-small: 15px,
-}*/
