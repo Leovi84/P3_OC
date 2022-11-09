@@ -6,7 +6,7 @@
 .restaurants .sectionArticle {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;   
     @include mobile-only{
@@ -61,6 +61,7 @@ span.icone i.fa-regular.fa-heart {
     color: $stack-lighten-dark-color;
     font-size: 3rem;
     opacity: 1;
+    position: relative;
         &:active {
             display: none;
         }
@@ -73,7 +74,11 @@ span.icone i.fa-regular.fa-heart {
 span.icone i.fa-solid.fa-heart {
     font-size: 3rem;
     opacity: 0;
-    color: $primary-color;
+    background: linear-gradient(to bottom right, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    line-height: initial;
     &:active {
         display: block;
     }

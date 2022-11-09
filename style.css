@@ -242,7 +242,7 @@ li.linkList h3 p i {
   right: 30px;
 }
 
-span.newTag, span.check {
+span.newTag {
   background: #99E2D0;
   padding: 12px;
   color: #38c4a1;
@@ -274,7 +274,7 @@ ul.aboutList > a {
 .restaurants .sectionArticle {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
@@ -339,6 +339,7 @@ span.icone i.fa-regular.fa-heart {
   color: #263238;
   font-size: 3rem;
   opacity: 1;
+  position: relative;
 }
 span.icone i.fa-regular.fa-heart:active {
   display: none;
@@ -351,7 +352,11 @@ span.icone i.fa-regular.fa-heart:hover {
 span.icone i.fa-solid.fa-heart {
   font-size: 3rem;
   opacity: 0;
-  color: #9356DC;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  line-height: initial;
 }
 span.icone i.fa-solid.fa-heart:active {
   display: block;
@@ -414,6 +419,56 @@ section.platImage img {
   color: #99E2D0;
 }
 
+.animOne {
+  animation: slidein 1s;
+}
+
+.animTwo {
+  animation: slidein 2s;
+}
+
+.animThree {
+  animation: slidein 3s;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cardTextMenu {
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+}
+.cardTextMenu:hover .check {
+  transition: right 1s;
+  right: 0;
+}
+.cardTextMenu:hover .price {
+  transition: right 1s;
+  right: 90px;
+}
+@media screen and (max-width: 768px) {
+  .cardTextMenu:active .check {
+    transition: right 1s;
+    right: 0;
+  }
+  .cardTextMenu:active .price {
+    transition: right 1s;
+    right: 90px;
+  }
+  .cardTextMenu:active .cardDescription {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 350px;
+  }
+}
+
 article .cardTextMenu {
   background: #fafafa;
   margin: 15px;
@@ -423,50 +478,18 @@ article .cardTextMenu {
   border-radius: 15px;
   padding: 0;
   flex-wrap: nowrap;
-  transition: cubic-bezier(0, 1, 0, 1);
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    opacity: 0;
-    margin-top: 300%;
-    width: 300%;
-  }
-  25% {
-    opacity: 0.2;
-    margin-top: 250%;
-    width: 250%;
-  }
-  50% {
-    opacity: 0.6;
-    margin-top: 200%;
-    width: 200%;
-  }
-  75% {
-    opacity: 0.8;
-    margin-top: 150%;
-    width: 150%;
-  }
-  to {
-    opacity: 1;
-    margin-top: 0%;
-    width: 100%;
-  }
+  width: auto;
+  height: 85px;
 }
 article .cardTextMenu .cardDescription {
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
-  padding: 5px;
 }
 article .cardTextMenu .cardDescription h4 {
   font-size: 20px;
-  padding: 5px;
-}
-article .cardTextMenu .cardDescription p {
-  font-size: 16px;
   padding: 5px;
 }
 
@@ -474,14 +497,29 @@ article .cardTextMenu .cardDescription p {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: center;
   flex-direction: column;
+  padding: 0 20px;
 }
+.checkValid .price {
+  position: absolute;
+  font-size: 16px;
+  padding: 5px;
+  right: 0;
+  font-weight: 500;
+}
+
 span.check {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   border-radius: 0 15px 15px 0;
+  background: #99E2D0;
+  padding: 12px;
+  color: #38c4a1;
+  position: absolute;
+  right: -105px;
+  width: 85px;
+  height: 85px;
 }
 span.check i {
   border-radius: 100%;
@@ -490,7 +528,6 @@ span.check i {
   background: #ffffff;
   padding: 6px 8px;
 }
-
 article button {
   display: flex;
   justify-content: center;
