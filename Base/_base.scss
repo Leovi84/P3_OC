@@ -13,6 +13,7 @@ html {
 body {
     box-sizing: border-box;
     background: $stack-light-color;
+    height: 100%;
 }
 
 section {
@@ -22,3 +23,50 @@ section {
 i {
     padding: 15px 15px 15px 0;
 }
+.btnEnter {
+    z-index: 900;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+        display: none;
+}
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    background: rgba(153,226,208,0.48);
+    display: flex;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    position: fixed;
+    z-index: 0;
+    .progress {
+        background: $stack-lighten-dark-color;
+        justify-content: flex-start;
+        border-radius: 100px;
+        align-items: center;
+        position: relative;
+        padding: 0 5px;
+        display: flex;
+        height: 40px;
+        width: 500px;
+      }
+    .progress-value {
+        animation: load 3s normal forwards;
+        border-radius: 100px;
+        background: $secondary-color;
+        height: 30px;
+        width: 0;
+      }
+    }
+
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 100%;
+    } 
+ }

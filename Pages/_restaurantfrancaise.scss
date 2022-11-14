@@ -105,21 +105,28 @@ article .cardTextMenu {
             flex-wrap: wrap;
             flex-direction: column;
             position: absolute;
-        }
+                &:hover {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 185px;
+            }
+            @include mobile-only {
+                &:active {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 185px;
+                }
+            }
         h4 {
             font-size: 20px;
-            padding: 5px;
-            @include truncate($texttruncated: false);
-            @include tablet-only {
-                @include truncate($texttruncated: true);
-            }
+            padding: 5px 0;
         }
         p {
-            @include truncate($texttruncated: false);
-            @include tablet-only {
-                @include truncate($texttruncated: true);
-            }
+            padding: 0 0 10px 0;
         }
+    }
 }
 
 .checkValid {
@@ -131,7 +138,7 @@ article .cardTextMenu {
     .price {
         position: absolute;
         font-size: 16px;
-        padding: 5px;
+        padding: 10px;
         right: 0;
         font-weight: 500;
     }
@@ -156,10 +163,4 @@ span.check {
         background: $stack-light-color;
         padding: 6px 8px;
     }
-}
-
-article button {
-    display: flex;
-    justify-content: center;
-    width: auto;
 }
