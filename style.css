@@ -34,17 +34,6 @@ i {
   padding: 15px 15px 15px 0;
 }
 
-.btnEnter {
-  z-index: 900;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btnEnter:focus {
-  display: none;
-}
-
 .container {
   justify-content: center;
   align-items: center;
@@ -56,6 +45,7 @@ i {
   top: 0;
   position: fixed;
   z-index: 0;
+  animation: hide 3s normal forwards;
 }
 .container .progress {
   background: #263238;
@@ -76,6 +66,14 @@ i {
   width: 0;
 }
 
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes load {
   0% {
     width: 0;
