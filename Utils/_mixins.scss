@@ -27,14 +27,3 @@ $shadows: 0px 6px 8px 2px rgba(189,189,189,0.8);
     display: flex;
     flex-direction: row;
 }
-
-/*@mixin truncate($texttruncated: true) {
-    @if($texttruncated){
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 992px;
-    }@else{
-        display: inline-flex;
-    }
-}*/
