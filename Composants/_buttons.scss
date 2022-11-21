@@ -13,10 +13,15 @@ a {
 
 button.btnGradient {
     background: $gradient-btn;
+    opacity: 1;
+    &:hover {
+        opacity: 0.8;
+        @include box-shadow($shadowdark);
+    }
 }
 
 button {
-    background-color: $secondary-color;
+    /*background-color: $secondary-color;*/
     padding: 15px;
     border-radius: 25px;
     border: transparent;

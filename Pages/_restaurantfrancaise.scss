@@ -78,7 +78,7 @@
         transition: right 1s;
         right: 90px; 
     }
-    @include mobile-only {
+    @include tablet-only {
         &:active .check {
             transition: right 1s;
             right: 0;
@@ -99,18 +99,24 @@ article .cardTextMenu {
     flex-wrap: nowrap;
     width: auto;
     height: 85px;
+    @include mobile-only {
+        width: calc(90%);
+    }
+    &:hover h4, p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100%);
+        @include mobile-only {
+            max-width: calc(30%);
+        } 
+    }
         .cardDescription {
             padding:0 20px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             position: absolute;
-                &:hover {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 185px;
-            }
             @include mobile-only {
                 &:active {
                 white-space: nowrap;
@@ -141,6 +147,7 @@ article .cardTextMenu {
         padding: 10px;
         right: 0;
         font-weight: 500;
+        top: 28px;
     }
 }
 

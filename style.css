@@ -59,9 +59,12 @@ i {
 @keyframes hide {
   0% {
     opacity: 1;
+    display: flex;
   }
   100% {
     opacity: 0;
+    display: none;
+    visibility: hidden;
   }
 }
 @keyframes load {
@@ -172,10 +175,17 @@ a {
 
 button.btnGradient {
   background: linear-gradient(360deg, rgba(147, 86, 220, 0.8) 0%, rgb(255, 121, 218) 100%);
+  opacity: 1;
+}
+button.btnGradient:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0px 6px 8px 2px rgb(189, 189, 189);
+  -moz-box-shadow: 0px 6px 8px 2px rgb(189, 189, 189);
+  box-shadow: 0px 6px 8px 2px rgb(189, 189, 189);
 }
 
 button {
-  background-color: #FF79DA;
+  /*background-color: $secondary-color;*/
   padding: 15px;
   border-radius: 25px;
   border: transparent;
@@ -511,7 +521,7 @@ span.icone i.fa-solid.fa-heart:hover {
   transition: right 1s;
   right: 90px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .cardTextMenu:active .check {
     transition: right 1s;
     right: 0;
@@ -534,18 +544,28 @@ article .cardTextMenu {
   width: auto;
   height: 85px;
 }
+@media screen and (max-width: 768px) {
+  article .cardTextMenu {
+    width: 90%;
+  }
+}
+article .cardTextMenu:hover h4, article .cardTextMenu p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  article .cardTextMenu:hover h4, article .cardTextMenu p {
+    max-width: 30%;
+  }
+}
 article .cardTextMenu .cardDescription {
   padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
-}
-article .cardTextMenu .cardDescription:hover {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 185px;
 }
 @media screen and (max-width: 768px) {
   article .cardTextMenu .cardDescription:active {
@@ -576,6 +596,7 @@ article .cardTextMenu .cardDescription p {
   padding: 10px;
   right: 0;
   font-weight: 500;
+  top: 28px;
 }
 
 span.check {
