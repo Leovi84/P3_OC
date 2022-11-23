@@ -169,5 +169,19 @@ span.check {
         width: 35px;
         background: $stack-light-color;
         padding: 6px 8px;
+        margin: 0 auto;
+    }
+}
+
+span.check i {
+    animation: rotate 3s;  
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);        
+    }
+    to {
+        transform: rotateZ(360deg);        
     }
 }

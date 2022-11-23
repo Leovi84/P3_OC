@@ -618,6 +618,22 @@ span.check i {
   width: 35px;
   background: #ffffff;
   padding: 6px 8px;
+  margin: 0 auto;
+  /*transition: transform 1s;
+  transform: rotate(0);*/
+}
+
+span.check i {
+  animation: rotate 3s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
