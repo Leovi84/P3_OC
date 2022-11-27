@@ -113,10 +113,11 @@ h4 {
   color: #000000;
 }
 
-.cardText h4 {
-  font-size: 2rem;
+.cardTextMenu h4 {
+  font-size: 18px;
   color: #000000;
   font-weight: 500;
+  padding-bottom: 15px;
 }
 
 .linkList h3 {
@@ -125,8 +126,8 @@ h4 {
 }
 
 p {
-  padding: 0 10px 10px 10px;
   color: #263238;
+  font-size: 16px;
 }
 
 p.searchPlaceholder, p.functionsList {
@@ -410,9 +411,6 @@ span.icone i.fa-regular.fa-heart {
   opacity: 1;
   position: relative;
 }
-span.icone i.fa-regular.fa-heart:active {
-  display: none;
-}
 span.icone i.fa-regular.fa-heart:hover {
   transition: 0.3s;
   opacity: 0;
@@ -426,9 +424,6 @@ span.icone i.fa-solid.fa-heart {
   -webkit-text-fill-color: transparent;
   position: absolute;
   line-height: initial;
-}
-span.icone i.fa-solid.fa-heart:active {
-  display: block;
 }
 span.icone i.fa-solid.fa-heart:hover {
   transition: 0.3s;
@@ -480,6 +475,24 @@ span.icone i.fa-solid.fa-heart:hover {
   }
 }
 
+.starters, .dishes, .deserts {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .starters, .dishes, .deserts {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .starters, .dishes, .deserts {
+    flex-direction: column;
+  }
+}
+
 .sectionSubTitle {
   padding: 10px 15px;
 }
@@ -511,7 +524,6 @@ span.icone i.fa-solid.fa-heart:hover {
 .cardTextMenu {
   overflow: hidden;
   position: relative;
-  width: 350px;
 }
 .cardTextMenu:hover .check {
   transition: right 1s;
@@ -540,47 +552,21 @@ article .cardTextMenu {
   box-shadow: 0px 6px 8px 2px rgba(189, 189, 189, 0.8);
   border-radius: 15px;
   padding: 0;
-  flex-wrap: nowrap;
-  width: auto;
   height: 85px;
-}
-@media screen and (max-width: 768px) {
-  article .cardTextMenu {
-    width: 90%;
-  }
-}
-article .cardTextMenu:hover h4, article .cardTextMenu p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-@media screen and (max-width: 768px) {
-  article .cardTextMenu:hover h4, article .cardTextMenu p {
-    max-width: 30%;
-  }
+  width: 350px;
 }
 article .cardTextMenu .cardDescription {
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
 }
-@media screen and (max-width: 768px) {
-  article .cardTextMenu .cardDescription:active {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 185px;
-  }
-}
-article .cardTextMenu .cardDescription h4 {
-  font-size: 20px;
-  padding: 5px 0;
-}
-article .cardTextMenu .cardDescription p {
-  padding: 0 0 10px 0;
+article .cardTextMenu .cardDescription:hover h4, article .cardTextMenu .cardDescription p {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .checkValid {
@@ -594,9 +580,8 @@ article .cardTextMenu .cardDescription p {
   position: absolute;
   font-size: 16px;
   padding: 10px;
-  right: 0;
   font-weight: 500;
-  top: 28px;
+  top: 48px;
 }
 
 span.check {
@@ -619,8 +604,6 @@ span.check i {
   background: #ffffff;
   padding: 6px 8px;
   margin: 0 auto;
-  /*transition: transform 1s;
-  transform: rotate(0);*/
 }
 
 span.check i {

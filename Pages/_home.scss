@@ -62,9 +62,6 @@ span.icone i.fa-regular.fa-heart {
     font-size: 3rem;
     opacity: 1;
     position: relative;
-        &:active {
-            display: none;
-        }
         &:hover {
             transition: 0.3s;
             opacity: 0;
@@ -79,10 +76,6 @@ span.icone i.fa-solid.fa-heart {
     -webkit-text-fill-color: transparent;
     position: absolute;
     line-height: initial;
-    &:active {
-        display: block;
-    }
-
     &:hover {
         transition: 0.3s;
         opacity: 1;

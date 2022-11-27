@@ -35,6 +35,20 @@
     }
 }
 
+.starters, .dishes, .deserts {
+    display: flex;
+    justify-content: center;
+    @include tablet-only {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;   
+}
+    @include mobile-only {
+    flex-direction: column;
+    }
+}
+
 .sectionSubTitle {
     padding: 10px 15px;
     hr {
@@ -69,7 +83,6 @@
 .cardTextMenu {
     overflow: hidden; 
     position: relative;
-    width: 350px;
     &:hover .check {
         transition: right 1s;
         right: 0;
@@ -96,45 +109,22 @@ article .cardTextMenu {
     @include box-shadow($shadows);
     border-radius: 15px;
     padding: 0;
-    flex-wrap: nowrap;
-    width: auto;
     height: 85px;
-    @include mobile-only {
-        width: calc(90%);
-    }
-    &:hover h4, p{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: calc(100%);
-        @include mobile-only {
-            max-width: calc(30%);
-        } 
-    }
-        .cardDescription {
-            padding:0 20px;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            position: absolute;
-            @include mobile-only {
-                &:active {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                max-width: 185px;
-                }
-            }
-        h4 {
-            font-size: 20px;
-            padding: 5px 0;
-        }
-        p {
-            padding: 0 0 10px 0;
-        }
-    }
+    width: 350px;
+    .cardDescription {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: absolute;
+        &:hover h4, p {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 }
-
+}
+}
 .checkValid {
     display: flex;
     flex-wrap: wrap;
@@ -145,9 +135,8 @@ article .cardTextMenu {
         position: absolute;
         font-size: 16px;
         padding: 10px;
-        right: 0;
         font-weight: 500;
-        top: 28px;
+        top: 48px;
     }
 }
 
