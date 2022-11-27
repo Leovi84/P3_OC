@@ -130,6 +130,10 @@ p {
   font-size: 16px;
 }
 
+p.district {
+  padding: 10px;
+}
+
 p.searchPlaceholder, p.functionsList {
   color: #000000;
 }
@@ -270,7 +274,7 @@ h2 {
 
 ul.filtersList {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-direction: row;
 }
 @media screen and (max-width: 768px) {
