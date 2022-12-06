@@ -1,3 +1,5 @@
+/* MAIN ITEMS FROM ALL PAGES */
+
 *,
 *::after,
 *::before {
@@ -20,10 +22,14 @@ section {
     margin: 0 15px 30px 15px;
 }
 
+/* FONTAWESOME ICON */
+
 i {
     padding: 0 15px 0 0;
 }
 
+
+/* PROGRESS BAR */
 .container {
     justify-content: center;
     align-items: center;
@@ -55,6 +61,7 @@ i {
         width: 0;
       }
     }
+/* ANIMATION OF THE PROGRESS BAR */
 
     @keyframes hide {
         0% {

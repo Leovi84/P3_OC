@@ -1,8 +1,11 @@
+/* FOOTER BACKGROUND */
+
 footer {
     background: $stack-lighten-dark-color;
     padding: 25px;
 }
 
+/* FOOTER LIST */
 ul.aboutList {
     display: flex; 
     flex-direction: column;

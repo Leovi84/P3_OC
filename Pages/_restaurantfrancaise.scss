@@ -1,3 +1,6 @@
+/* MAIN CSS COMMON TO RESTAURANTS PAGES */
+
+/* MAIN IMAGE OF THE RESTAURANTS */
 .platImage {
     display: flex;
     align-items: center;
@@ -14,6 +17,7 @@
     }
 }
 
+/* CONTAINER OF THE MENU FOR A RESTAURANT */
 .menu {
     background: $stack-light-color;
     position: relative;
@@ -35,6 +39,7 @@
     }
 }
 
+/* CONTAINER OF DISHES WITH ANIMATIONS AND CARDS STYLES */
 .starters, .dishes, .deserts {
     display: flex;
     justify-content: center;

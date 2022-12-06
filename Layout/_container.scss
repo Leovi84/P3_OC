@@ -1,3 +1,6 @@
+/* CONTAINER STYLES */
+
+/* FIELD SET */
 .searchField {
     background: #f5f5f5;
     display: flex;
@@ -7,6 +10,7 @@
     justify-content: center;
 }
 
+/* CAPTION OF THE SITE and MAIN TITLE */
 .caption {
     background: #fafafa;
     display: flex;
@@ -24,6 +28,7 @@ h2 {
     margin: 30px 15px;
 }
 
+/* FILTERS */
 ul.filtersList {
     display: flex;
     justify-content: space-around;

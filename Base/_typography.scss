@@ -1,4 +1,4 @@
-
+/* TYPOGRAPHY STYLE FROM THE SITE */
 body {
     font-family: 'Roboto', sans-serif;
     color: $stack-dark-color;
@@ -7,11 +7,14 @@ body {
     line-height: 1.2;
 }
 
+/* TYPOGRAPHY STYLE OF THE LOGO */
 .idLogo i {
     color: $stack-lighten-dark-color;
     font-size: 3rem;
 }
 
+
+/* TYPOGRAPHY STYLE OF TITLES */
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -50,6 +53,7 @@ h4 {
     font-weight: 400 !important;
 }
 
+/* TYPOGRAPHY STYLE OF PARAGRAPHS */
 p {
     color: $stack-lighten-dark-color;
     font-size: 16px;
@@ -66,11 +70,13 @@ p.searchPlaceholder, p.functionsList {
     }
 }
 
+/* TYPOGRAPHY STYLE OF FONTAWESOME LIKES HEART */
 .sectionTitle i .fa-regular .fa-heart {
     font-size: 3rem;
     color: $stack-lighten-dark-color;;
 }
 
+/* TYPOGRAPHY STYLE OF BUTTONS */
 button {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -78,6 +84,7 @@ button {
     color: $stack-light-color;
 }
 
+/* TYPOGRAPHY STYLE OF THE LOGO IN THE FOOTER */
 p.lightLogo {
     font-family: 'Shrikhand', sans-serif;
     color: $stack-light-color;

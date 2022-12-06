@@ -10,6 +10,7 @@ a {
     align-items: center;
     justify-content: flex-start;
 }
+/* BUTTONS STYLESs*/
 
 button.btnGradient {
     background: $gradient-btn;
@@ -21,7 +22,6 @@ button.btnGradient {
 }
 
 button {
-    /*background-color: $secondary-color;*/
     padding: 15px;
     border-radius: 25px;
     border: transparent;
