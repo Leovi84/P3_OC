@@ -110,7 +110,7 @@ article .cardTextMenu {
     @include box-shadow($shadows);
     border-radius: 15px;
     padding: 0;
-    height: 85px;
+    height: 100px;
     width: 350px;
     .cardDescription {
         padding: 20px;
@@ -173,7 +173,7 @@ span.check {
     position: absolute;
     right: -105px;
     width: 85px;
-    height: 85px;
+    height: 100px;
     & i {
         border-radius: 100%;
         height: 35px;
