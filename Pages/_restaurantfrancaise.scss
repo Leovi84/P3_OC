@@ -1,6 +1,8 @@
 /* MAIN CSS COMMON TO RESTAURANTS PAGES */
 
+
 /* MAIN IMAGE OF THE RESTAURANTS */
+
 .platImage {
     display: flex;
     align-items: center;
@@ -10,14 +12,16 @@
         width: 100%;
         @include tablet-only {
             height: 600px;
-            }
-            @include mobile-only {
-                height: 250px;
-                }
+        }
+        @include mobile-only {
+            height: 250px;
+        }
     }
 }
 
+
 /* CONTAINER OF THE MENU FOR A RESTAURANT */
+
 .menu {
     background: $stack-light-color;
     position: relative;
@@ -36,27 +40,33 @@
     }
     @include mobile-only {
         top: -80px;
+        padding: 0;
     }
 }
 
+
 /* CONTAINER OF DISHES WITH ANIMATIONS AND CARDS STYLES */
-.starters, .dishes, .deserts {
+
+.starters,
+.dishes,
+.deserts {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     @include tablet-only {
         flex-wrap: wrap;
-        justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 1200px;   
-}
+        max-width: 1200px;
+        align-items: center;
+    }
     @include mobile-only {
-    flex-direction: column;
+        flex-direction: column;
     }
 }
 
 .sectionSubTitle {
     padding: 10px 15px;
+    width: 100%;
     hr {
         max-width: 50px;
         color: $third-color;
@@ -64,30 +74,28 @@
 }
 
 .animOne {
-    animation: slidein 1s;  
+    animation: slidein 1s;
 }
 
 .animTwo {
-    animation: slidein 2s;  
+    animation: slidein 2s;
 }
 
 .animThree {
-    animation: slidein 3s;  
+    animation: slidein 3s;
 }
 
 @keyframes slidein {
     from {
         opacity: 0;
-        
     }
     to {
         opacity: 1;
-        
     }
 }
 
 .cardTextMenu {
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     &:hover .check {
         transition: right 1s;
@@ -95,7 +103,7 @@
     }
     &:hover .price {
         transition: right 2s;
-        right: 90px; 
+        right: 90px;
     }
     @include tablet-only {
         &:active .check {
@@ -104,8 +112,12 @@
         }
         &:active .price {
             transition: right 2s;
-            right: 90px; 
+            right: 90px;
         }
+    }
+    @include mobile-only {
+        padding: 0 !important;
+        margin-left: 5px !important;
     }
 }
 
@@ -118,50 +130,53 @@ article .cardTextMenu {
     height: 100px;
     width: 350px;
     .cardDescription {
-        padding: 20px;
+        padding: 20px 0 0 10px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         position: absolute;
         h4 {
+            font-size: 16px;
             width: 270px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         p {
-        width: 270px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+            font-size: 14px;
+            width: 270px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include mobile-only {
+                width: 265px;
+            }
         }
     }
     &:hover .cardDescription h4 {
-        width: 232px !important;
+        width: 240px !important;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     &:hover .cardDescription p {
-        width: 200px !important;
+        width: 205px !important;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 }
 
-
-
 .checkValid {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     flex-direction: column;
-    padding:0 20px;
+    padding: 0 20px;
     .price {
         position: absolute;
         font-size: 16px;
-        padding: 10px;
+        padding: 8px;
         font-weight: 500;
         top: 45px;
     }
@@ -190,14 +205,14 @@ span.check {
 }
 
 span.check i {
-    animation: rotate 3s;  
+    animation: rotate 3s;
 }
 
 @keyframes rotate {
     from {
-        transform: rotate(0);        
+        transform: rotate(0);
     }
     to {
-        transform: rotateZ(360deg);        
+        transform: rotateZ(360deg);
     }
 }
